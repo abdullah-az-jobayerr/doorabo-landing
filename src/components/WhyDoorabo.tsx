@@ -1,0 +1,54 @@
+import {
+  Lightning,
+  MapPin,
+  ShieldCheck,
+  Heart,
+} from "@phosphor-icons/react/dist/ssr";
+import { whyDoorabo } from "@/lib/data";
+
+const iconMap: Record<string, React.ReactNode> = {
+  bolt: <Lightning size={24} weight="fill" />,
+  pin: <MapPin size={24} weight="fill" />,
+  shield: <ShieldCheck size={24} weight="fill" />,
+  heart: <Heart size={24} weight="fill" />,
+};
+
+export default function WhyDoorabo() {
+  return (
+    <section id="why" className="bg-soft-green py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-5 md:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-12 reveal">
+          <span className="text-xs font-semibold text-[#08783E] uppercase tracking-[0.15em]">
+            কেন Doorabo?
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-3 tracking-tight">
+            আমরা আছি <span className="text-[#08783E]">আপনার পাশে</span>
+          </h2>
+          <p className="text-[#111827]/60 mt-3 text-sm md:text-base leading-relaxed">
+            আপনার সময় বাঁচানোই আমাদের দায়িত্ব — তাই প্রতিটি ধাপে যত্ন নিয়ে
+            সাজানো।
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {whyDoorabo.map((w) => (
+            <div
+              key={w.title}
+              className="reveal text-center p-6 rounded-xl bg-[#FCFDF9] border border-[#08783E]/10 hover:border-[#08783E]/20 hover:shadow-[0_4px_16px_rgba(8,120,62,0.08)] hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <div className="w-14 h-14 mx-auto rounded-lg bg-[#FFD329] text-[#08783E] flex items-center justify-center mb-4">
+                {iconMap[w.iconKey] ?? iconMap.bolt}
+              </div>
+              <h3 className="text-lg font-bold text-[#111827] tracking-tight">
+                {w.title}
+              </h3>
+              <p className="text-sm text-[#111827]/60 mt-2 leading-relaxed">
+                {w.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
