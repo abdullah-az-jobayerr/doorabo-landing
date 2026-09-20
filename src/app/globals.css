@@ -10,10 +10,15 @@
   --shadow-card: 0 4px 20px -4px rgba(17, 24, 39, 0.08);
 }
 
+/* =========================================
+   BASE — HTML / BODY
+   ========================================= */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 96px;
+  scroll-padding-top: 130px;   /* fixed header + marquee = ~130px */
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -21,14 +26,19 @@ body {
   background-color: #F5FBF7;
   color: var(--color-ink);
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
-/* Smooth scroll with sticky header offset */
+/* Section anchor offset for fixed header */
 section[id] {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 130px;
 }
 
-/* Reveal animation */
+/* =========================================
+   REVEAL ANIMATION
+   ========================================= */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -39,12 +49,23 @@ section[id] {
   transform: translateY(0);
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #F5FBF7; }
-::-webkit-scrollbar-thumb { background: #08783E; border-radius: 10px; }
+/* =========================================
+   CUSTOM SCROLLBAR
+   ========================================= */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F5FBF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #08783E;
+  border-radius: 10px;
+}
 
-/* 🎯 @layer utilities er vitore custom backgrounds */
+/* =========================================
+   SOFT BACKGROUND UTILITIES
+   ========================================= */
 @layer utilities {
   .bg-soft-green {
     background:
@@ -93,7 +114,9 @@ section[id] {
   }
 }
 
-/* WhatsApp wave animation */
+/* =========================================
+   WHATSAPP WAVE ANIMATION
+   ========================================= */
 @keyframes whatsappWave {
   0% {
     transform: scale(1);
@@ -111,4 +134,27 @@ section[id] {
     transform: scale(1.9);
     opacity: 0;
   }
+}
+
+/* =========================================
+   MARQUEE ANIMATION (Header top strip)
+   ========================================= */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+animation: marquee 60s linear infinite;   
+will-change: transform;
+transform: translateZ(0); /* GPU acceleration */
+}
+
+/* Pause on hover */
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
