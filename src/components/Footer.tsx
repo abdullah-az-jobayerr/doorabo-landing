@@ -96,7 +96,7 @@ export default function Footer() {
               <span className="text-[#FFD329] mt-0.5 shrink-0 drop-shadow-[0_1px_1px_rgba(0,0,0,0.40)]">
                 <MapPin size={16} weight="fill" />
               </span>
-              রংপুর শহর, রংপুর, বাংলাদেশ
+              রংপুর সদর, রংপুর
             </p>
           </div>
         </div>
