@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function WhatsAppFloat({
-  phoneNumber = "8801700000000", // 🔧 tomar number ekhane
+  phoneNumber = "8801700000000",
   message = "আসসালামু আলাইকুম, Doorabo সম্পর্কে জানতে চাই।",
 }: Props) {
   const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -19,18 +19,14 @@ export default function WhatsAppFloat({
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className="fixed bottom-5 right-5 md:bottom-7 md:right-7 z-50 group"
+      className="fixed bottom-4 right-4 md:bottom-7 md:right-7 z-40 group"
     >
-      {/* Wrapper for wave rings */}
-      <span className="relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16">
-        {/* Wave ring 1 — 3.5 sec cycle */}
+      <span className="relative flex items-center justify-center w-12 h-12 md:w-16 md:h-16">
+        {/* Wave rings */}
         <span
           className="absolute inset-0 rounded-full bg-[#25D366]"
-          style={{
-            animation: "whatsappWave 3.5s ease-out infinite",
-          }}
+          style={{ animation: "whatsappWave 3.5s ease-out infinite" }}
         />
-        {/* Wave ring 2 — 3.5 sec cycle, delayed 0.3s for double ripple */}
         <span
           className="absolute inset-0 rounded-full bg-[#25D366]"
           style={{
@@ -39,9 +35,8 @@ export default function WhatsAppFloat({
           }}
         />
 
-        {/* Main button — static, always on top */}
-        <span className="relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-white shadow-[0_4px_16px_rgba(37,211,102,0.4)] hover:shadow-[0_8px_24px_rgba(37,211,102,0.5)] transition-shadow duration-300 overflow-visible">
-          {/* Image inside clipped circle */}
+        {/* Main button */}
+        <span className="relative flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-white shadow-[0_4px_16px_rgba(37,211,102,0.4)] hover:shadow-[0_8px_24px_rgba(37,211,102,0.5)] transition-shadow duration-300 overflow-visible">
           <span className="absolute inset-0 rounded-full overflow-hidden">
             <Image
               src="/whatsapp.png"
@@ -52,7 +47,7 @@ export default function WhatsAppFloat({
             />
           </span>
 
-          {/* Tooltip (desktop hover) */}
+          {/* Tooltip (desktop only) */}
           <span className="hidden md:block absolute right-full mr-3 px-3 py-1.5 rounded-md bg-[#111827] text-white text-xs font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
             WhatsApp এ চ্যাট করুন
           </span>
