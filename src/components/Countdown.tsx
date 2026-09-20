@@ -76,7 +76,7 @@ export default function Countdown() {
 
               {/* Card title */}
               <h3 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight">
-                রংপুর<span className="text-[#FFD329]">প্রস্তুত তো?</span>
+                রংপুর <span className="text-[#FFD329]">প্রস্তুত তো?</span>
               </h3>
 
               <p className="mt-3 text-white/70 max-w-md text-sm leading-relaxed">
