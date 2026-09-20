@@ -34,15 +34,19 @@ export default function WhyDoorabo() {
           {whyDoorabo.map((w) => (
             <div
               key={w.title}
-              className="reveal text-center p-6 rounded-xl bg-[#FCFDF9] border border-[#08783E]/10 hover:border-[#08783E]/20 hover:shadow-[0_4px_16px_rgba(8,120,62,0.08)] hover:-translate-y-0.5 transition-all duration-300"
+              className="reveal group text-center p-6 rounded-xl bg-gradient-to-br from-white to-[#F0F9F4] border border-[#08783E]/20 hover:border-[#08783E]/40 shadow-[0_2px_8px_rgba(8,120,62,0.06),inset_0_0_0_1px_rgba(255,255,255,0.8)] hover:shadow-[0_8px_20px_rgba(8,120,62,0.12),inset_0_0_0_1px_rgba(255,255,255,0.8)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              <div className="w-14 h-14 mx-auto rounded-lg bg-[#FFD329] text-[#08783E] flex items-center justify-center mb-4">
-                {iconMap[w.iconKey] ?? iconMap.bolt}
+              {/* Yellow icon box — GREEN shadow (visible 3D) */}
+              <div className="w-14 h-14 mx-auto rounded-lg bg-[#FFD329] text-[#08783E] flex items-center justify-center mb-4 shadow-[0_4px_12px_rgba(8,120,62,0.35),0_2px_4px_rgba(8,120,62,0.20)] group-hover:shadow-[0_5px_14px_rgba(8,120,62,0.45),0_2px_4px_rgba(8,120,62,0.25)] transition-all duration-300">
+                <span className="drop-shadow-[0_1px_1px_rgba(8,120,62,0.50)]">
+                  {iconMap[w.iconKey] ?? iconMap.bolt}
+                </span>
               </div>
+
               <h3 className="text-lg font-bold text-[#111827] tracking-tight">
                 {w.title}
               </h3>
-              <p className="text-sm text-[#111827]/60 mt-2 leading-relaxed">
+              <p className="text-sm text-[#111827]/65 mt-2 leading-relaxed">
                 {w.desc}
               </p>
             </div>

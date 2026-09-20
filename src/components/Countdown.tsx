@@ -48,7 +48,7 @@ export default function Countdown() {
 
   return (
     <section className="max-w-7xl mx-auto px-5 md:px-8 pb-16 md:pb-20">
-      <div className="rounded-xl bg-[#08783E] text-white p-8 md:p-12 relative overflow-hidden reveal shadow-[0_2px_8px_rgba(8,120,62,0.08)]">
+      <div className="rounded-xl px-7 py-5 bg-gradient-to-l from-[#2b8d5b] via-[#116438] to-[#032714] text-white border-[#084e2a] shadow-[0_2px_8px_rgba(8,120,62,0.15)]">
         {/* Decorative — softer */}
         <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-[#FFD329]/10 blur-3xl" />
         <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-[#FFD329]/5 blur-3xl" />
@@ -60,7 +60,7 @@ export default function Countdown() {
               <span>আমাদের যাত্রা শুরু হতে আর</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-              প্রস্তুত তো <span className="text-[#FFD329]">রংপুর?</span>
+              রংপুর <span className="text-[#FFD329]">প্রস্তুত তো?</span>
             </h2>
             <p className="mt-3 text-white/70 max-w-md text-sm leading-relaxed">
               খুব শীঘ্রই আপনার দরজায় পৌঁছে যাবে আপনার দৈনন্দিন প্রয়োজন।

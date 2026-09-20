@@ -13,10 +13,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function HowItWorks() {
   return (
-    <section
-      id="how"
-      className="bg-soft-yellow py-16 md:py-24"
-    >
+    <section id="how" className="bg-soft-yellow py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14 reveal">
           <span className="text-xs font-semibold text-[#08783E] uppercase tracking-[0.15em]">
@@ -33,20 +30,25 @@ export default function HowItWorks() {
 
         <div className="grid md:grid-cols-3 gap-5 relative">
           {/* connecting line (desktop) */}
-          <div className="hidden md:block absolute top-12 left-[18%] right-[18%] h-px bg-[#08783E]/15" />
+          <div className="hidden md:block absolute top-12 left-[18%] right-[18%] h-px bg-[#08783E]/20" />
 
           {howItWorks.map((s) => (
             <div
               key={s.step}
-              className="reveal relative bg-white rounded-xl p-7 border border-[#08783E]/10 hover:border-[#08783E]/20 hover:shadow-[0_4px_16px_rgba(8,120,62,0.08)] hover:-translate-y-0.5 transition-all duration-300"
+              className="reveal group relative bg-gradient-to-br from-white to-[#F0F9F4] rounded-xl p-7 border border-[#08783E]/20 hover:border-[#08783E]/40 shadow-[0_2px_8px_rgba(8,120,62,0.06),inset_0_0_0_1px_rgba(255,255,255,0.8)] hover:shadow-[0_8px_20px_rgba(8,120,62,0.12),inset_0_0_0_1px_rgba(255,255,255,0.8)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              {/* Step number */}
-              <div className="absolute -top-3.5 -left-3.5 w-9 h-9 rounded-md bg-[#FFD329] text-[#08783E] font-bold text-sm flex items-center justify-center shadow-[0_1px_3px_rgba(17,24,39,0.08)] border border-[#08783E]/5">
-                {s.step}
+              {/* Step number badge — layered shadow */}
+              <div className="absolute -top-3.5 -left-3.5 w-9 h-9 rounded-md bg-[#FFD329] text-[#08783E] font-bold text-sm flex items-center justify-center border border-[#08783E]/10 shadow-[0_3px_8px_rgba(8,120,62,0.30),0_1px_2px_rgba(8,120,62,0.20)]">
+                <span className="drop-shadow-[0_1px_1px_rgba(8,120,62,0.40)]">
+                  {s.step}
+                </span>
               </div>
 
-              <div className="w-14 h-14 rounded-lg bg-[#08783E]/8 flex items-center justify-center mb-5 text-[#08783E]">
-                {iconMap[s.iconKey] ?? iconMap.cart}
+              {/* Icon box — with green shadow */}
+              <div className="w-14 h-14 rounded-lg bg-[#08783E]/10 flex items-center justify-center mb-5 text-[#08783E] border border-[#08783E]/10 shadow-[0_3px_8px_rgba(8,120,62,0.12),0_1px_2px_rgba(8,120,62,0.08)] group-hover:bg-[#08783E]/15 group-hover:shadow-[0_4px_12px_rgba(8,120,62,0.18)] transition-all duration-300">
+                <span className="drop-shadow-[0_1px_1px_rgba(8,120,62,0.30)]">
+                  {iconMap[s.iconKey] ?? iconMap.cart}
+                </span>
               </div>
 
               <h3 className="text-lg font-bold text-[#111827] tracking-tight">
@@ -59,17 +61,17 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        {/* Quote card */}
+        {/* Quote card — with layered shadow */}
         <div className="mt-14 reveal">
-          <div className="relative rounded-xl bg-[#08783E] text-white p-8 md:p-12 overflow-hidden shadow-[0_2px_8px_rgba(8,120,62,0.10)]">
+          <div className="relative rounded-xl px-5 py-7 bg-gradient-to-l from-[#2b8d5b] via-[#116438] to-[#032714] text-white border border-[#084e2a] shadow-[0_8px_24px_rgba(8,120,62,0.25),0_4px_8px_rgba(8,120,62,0.15)] overflow-hidden">
             <div className="absolute -top-16 -right-10 w-64 h-64 rounded-full bg-[#FFD329]/10 blur-3xl" />
             <div className="relative flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
-              <div className="text-6xl md:text-7xl text-[#FFD329] font-serif leading-none">
+              <div className="text-6xl md:text-7xl text-[#FFD329] font-serif leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.30)]">
                 &ldquo;
               </div>
               <div>
                 <p className="text-2xl md:text-3xl font-bold leading-snug tracking-tight">
-                  আপনার সময় বাঁচালে আমাদের দায়িত্ব
+                  আপনার সময় বাঁচানো আমাদের দায়িত্ব
                 </p>
                 <p className="text-white/65 mt-3 text-sm">— Doorabo</p>
               </div>

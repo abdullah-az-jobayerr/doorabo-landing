@@ -10,6 +10,8 @@ import FAQ from "@/components/FAQ";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
+import FloatingBadge from "@/components/FloatingBadge";
 
 export default function Home() {
   return (
@@ -26,6 +28,8 @@ export default function Home() {
       <Newsletter />
       <Footer />
       <ScrollReveal />
+      <WhatsAppFloat />  
+      <FloatingBadge /> 
     </main>
   );
 }

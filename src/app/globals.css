@@ -13,12 +13,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 96px;
+  overflow-x: hidden;
 }
 
 body {
   font-family: var(--font-hind);
-  background-color: var(--color-bg);
+  background-color: #F5FBF7;
   color: var(--color-ink);
+  overflow-x: hidden;
 }
 
 /* Smooth scroll with sticky header offset */
@@ -39,50 +41,74 @@ section[id] {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #FCFDF9; }
+::-webkit-scrollbar-track { background: #F5FBF7; }
 ::-webkit-scrollbar-thumb { background: #08783E; border-radius: 10px; }
 
-/* =========================================
-   SOFT GRADIENT BACKGROUNDS
-   ========================================= */
+/* 🎯 @layer utilities er vitore custom backgrounds */
+@layer utilities {
+  .bg-soft-green {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(8, 120, 62, 0.08), transparent 70%),
+      #F5FBF7;
+  }
 
-/* Soft green tint — top glow */
-.bg-soft-green {
-  background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(8, 120, 62, 0.07), transparent 70%),
-    #FCFDF9;
+  .bg-soft-green-bottom {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 100%, rgba(8, 120, 62, 0.08), transparent 70%),
+      #F5FBF7;
+  }
+
+  .bg-soft-yellow {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(8, 120, 62, 0.06), transparent 70%),
+      #F5FBF7;
+  }
+
+  .bg-soft-yellow-bottom {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 100%, rgba(8, 120, 62, 0.06), transparent 70%),
+      #F5FBF7;
+  }
+
+  .bg-soft-mixed {
+    background:
+      radial-gradient(ellipse 60% 40% at 0% 0%, rgba(8, 120, 62, 0.07), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 100% 100%, rgba(8, 120, 62, 0.05), transparent 60%),
+      #F5FBF7;
+  }
+
+  .bg-soft-hero {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(8, 120, 62, 0.06), transparent 70%),
+      radial-gradient(ellipse 60% 50% at 100% 100%, rgba(8, 120, 62, 0.05), transparent 70%),
+      #F5FBF7;
+  }
+
+  .bg-soft-plain {
+    background: #F5FBF7;
+  }
+
+  .bg-clean-white {
+    background: #FFFFFF;
+  }
 }
 
-/* Soft green tint — bottom glow */
-.bg-soft-green-bottom {
-  background:
-    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(8, 120, 62, 0.07), transparent 70%),
-    #FCFDF9;
-}
-
-/* Soft yellow tint — top glow */
-.bg-soft-yellow {
-  background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255, 211, 41, 0.12), transparent 70%),
-    #FCFDF9;
-}
-
-/* Soft yellow tint — bottom glow */
-.bg-soft-yellow-bottom {
-  background:
-    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(255, 211, 41, 0.12), transparent 70%),
-    #FCFDF9;
-}
-
-/* Mixed green + yellow */
-.bg-soft-mixed {
-  background:
-    radial-gradient(ellipse 60% 40% at 0% 0%, rgba(8, 120, 62, 0.06), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(255, 211, 41, 0.08), transparent 60%),
-    #FCFDF9;
-}
-
-/* Pure white for contrast sections */
-.bg-clean-white {
-  background: #FFFFFF;
+/* WhatsApp wave animation */
+@keyframes whatsappWave {
+  0% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  15% {
+    transform: scale(1.4);
+    opacity: 0.18;
+  }
+  30% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
 }
