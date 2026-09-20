@@ -10,7 +10,11 @@ import {
 import Logo from "./Logo";
 
 const socials = [
-  { name: "Facebook", href: "https://www.facebook.com/doorabobd", Icon: FacebookLogo },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/doorabobd",
+    Icon: FacebookLogo,
+  },
   { name: "Instagram", href: "#", Icon: InstagramLogo },
   { name: "YouTube", href: "#", Icon: YoutubeLogo },
   { name: "TikTok", href: "#", Icon: TiktokLogo },
@@ -23,7 +27,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/15">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Logo variant="light" />
+            {/* 🎯 Boro logo */}
+            <Logo size="lg" variant="light" />
 
             <p className="text-white/70 text-sm leading-relaxed max-w-md mt-5">
               রংপুরের মানুষের পাশে, সবসময়। দৈনন্দিন প্রয়োজন এখন আপনার দরজায় —
@@ -37,6 +42,8 @@ export default function Footer() {
                   key={name}
                   href={href}
                   aria-label={name}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group w-10 h-10 rounded-md bg-white/10 hover:bg-[#FFD329] hover:text-[#08783E] flex items-center justify-center transition-all duration-300 shadow-[0_3px_8px_rgba(0,0,0,0.20),0_1px_2px_rgba(0,0,0,0.15)] hover:shadow-[0_5px_12px_rgba(255,211,41,0.35),0_2px_4px_rgba(255,211,41,0.25)] hover:-translate-y-0.5"
                 >
                   <Icon
@@ -60,7 +67,7 @@ export default function Footer() {
                   <Phone size={16} weight="fill" />
                 </span>
                 <a
-                  href="tel:+8801577-744073"
+                  href="tel:+8801577744073"
                   className="hover:text-[#FFD329] transition-colors"
                 >
                   +8801577-744073
@@ -72,9 +79,9 @@ export default function Footer() {
                 </span>
                 <a
                   href="mailto:dooraboofficial@gmail.com"
-                  className="hover:text-[#FFD329] transition-colors"
+                  className="hover:text-[#FFD329] transition-colors break-all"
                 >
-                   dooraboofficial@gmail.com
+                  dooraboofficial@gmail.com
                 </a>
               </li>
             </ul>

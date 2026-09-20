@@ -5,21 +5,23 @@ import { motion } from "motion/react";
 
 export default function FloatingBadge() {
   return (
-    // 🎯 OUTER wrapper — pure div with `fixed` (no transform, no motion)
+    // 🎯 OUTER wrapper — fixed at left side, 3/4 from top
     <div
-      className="fixed left-3 bottom-4 md:left-7 md:bottom-7 z-50"
+      className="fixed left-3 md:left-7 z-40"
       style={{
+        top: "75%",                              // 🎯 top theke 75% niche
+        transform: "translateY(-50%)",           // 🎯 perfect center
         maxWidth: "calc(100vw - 5.5rem)",
       }}
     >
-      {/* INNER — motion.div only for entrance + wiggle animation */}
+      {/* INNER — motion.div for entrance + wiggle */}
       <motion.div
         initial={{ opacity: 0, x: -12 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.8 }}
         className="bg-white rounded-lg border border-[#08783E]/10 p-2.5 md:p-3 flex items-center gap-2 md:gap-2.5 cursor-pointer shadow-[0_8px_20px_rgba(8,120,62,0.15),0_2px_6px_rgba(8,120,62,0.10)] hover:shadow-[0_12px_28px_rgba(8,120,62,0.22),0_4px_8px_rgba(8,120,62,0.15)] transition-shadow duration-300"
       >
-        {/* Inner motion wrapper — only for the wiggle animation */}
+        {/* Inner motion wrapper — only for wiggle animation */}
         <motion.div
           animate={{
             x: [0, -4, 4, -3, 3, 0],
@@ -47,10 +49,10 @@ export default function FloatingBadge() {
             />
           </div>
 
-          {/* Text — with truncate to prevent overflow */}
+          {/* Text */}
           <div className="min-w-0">
             <p className="text-[10px] md:text-[11px] text-[#111827]/55 tracking-wide truncate">
-              শীঘ্রই চালু হচ্ছে
+              শীঘ্রই ওয়েবসাইট চালু হচ্ছে
             </p>
             <p className="font-bold text-xs md:text-sm text-[#08783E] truncate">
               রংপুর শহরে

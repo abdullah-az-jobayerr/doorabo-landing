@@ -6,9 +6,9 @@ type Props = {
 };
 
 const sizeMap = {
-  sm: { width: 120, height: 36 },
-  md: { width: 150, height: 44 },
-  lg: { width: 190, height: 56 },
+  sm: { width: 160, height: 52 },   // 🎯 Age 140×44 → ekhon 150×48
+  md: { width: 220, height: 72 },   // 🎯 Age 180×56 → ekhon 200×64
+  lg: { width: 260, height: 84 },   // 🎯 Age 220×68 → ekhon 240×76
 };
 
 export default function Logo({ size = "md", variant = "dark" }: Props) {
