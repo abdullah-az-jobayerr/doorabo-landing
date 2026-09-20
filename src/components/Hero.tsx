@@ -8,7 +8,7 @@ import {
 export default function Hero() {
   return (
     <section
-      className="relative overflow-hidden"
+      className="relative overflow-hidden mt-4"
       style={{ backgroundColor: "#F5FBF7" }}
     >
       {/* Decorative blobs — green only, no yellow */}
