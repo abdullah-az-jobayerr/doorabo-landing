@@ -24,10 +24,14 @@ export default function Hero() {
             শীঘ্রই আসছে রংপুরে
           </span>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.12] tracking-tight text-[#111827]">
+          {/* 🎯 Headline — chhoto kora hoyeche */}
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.15] tracking-tight text-[#111827]">
             রংপুরের মানুষের জন্য
             <br />
-            <span className="text-[#08783E]">দৈনিক বাজার, মেডিসিন সহ সকল প্রয়োজন</span> এখন
+            <span className="text-[#08783E]">
+              দৈনিক বাজার, মেডিসিন সহ সকল প্রয়োজন
+            </span>{" "}
+            এখন
             <br />
             <span className="relative inline-block">
               আপনার দরজায়
@@ -62,18 +66,21 @@ export default function Hero() {
           </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-5 text-xs md:text-sm text-[#111827]/65">
-            {["৩০ মিনিটে হোম ডেলিভারি", "১০০% যাচাইকৃত পণ্য", "প্রিমিয়াম মেম্বারশিপ এ মাসের বাজার বাকি তে করার সুবিধা" ,"পণ্য হাতে বুঝে নিয়ে মূল্য পরিশোধ এর সুবিধা"].map(
-              (label, i) => (
-                <div key={i} className="flex items-center gap-1.5">
-                  <CheckCircle
-                    size={16}
-                    weight="fill"
-                    className="text-[#08783E] drop-shadow-[0_1px_1px_rgba(8,120,62,0.40)]"
-                  />
-                  <span>{label}</span>
-                </div>
-              )
-            )}
+            {[
+              "৩০ মিনিটে হোম ডেলিভারি",
+              "১০০% যাচাইকৃত পণ্য",
+              "প্রিমিয়াম মেম্বারশিপ এ মাসের বাজার বাকি তে করার সুবিধা",
+              "পণ্য হাতে বুঝে নিয়ে মূল্য পরিশোধ এর সুবিধা",
+            ].map((label, i) => (
+              <div key={i} className="flex items-center gap-1.5">
+                <CheckCircle
+                  size={16}
+                  weight="fill"
+                  className="text-[#08783E] drop-shadow-[0_1px_1px_rgba(8,120,62,0.40)]"
+                />
+                <span>{label}</span>
+              </div>
+            ))}
           </div>
         </div>
 

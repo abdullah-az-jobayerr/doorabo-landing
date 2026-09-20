@@ -27,8 +27,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/15">
           {/* Brand */}
           <div className="lg:col-span-2">
-            {/* 🎯 Boro logo */}
-            <Logo size="lg" variant="light" />
+            {/* 🎯 Chhoto logo — size="md" */}
+            <Logo size="md" variant="light" src="/footer_logo.png" />
 
             <p className="text-white/70 text-sm leading-relaxed max-w-md mt-5">
               রংপুরের মানুষের পাশে, সবসময়। দৈনন্দিন প্রয়োজন এখন আপনার দরজায় —
@@ -79,7 +79,7 @@ export default function Footer() {
                 </span>
                 <a
                   href="mailto:dooraboofficial@gmail.com"
-                  className="hover:text-[#FFD329] transition-colors break-all"
+                  className="hover:text-[#FFD329] transition-colors break-all text-xs md:text-sm"
                 >
                   dooraboofficial@gmail.com
                 </a>

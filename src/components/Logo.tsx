@@ -3,29 +3,35 @@ import Image from "next/image";
 type Props = {
   size?: "sm" | "md" | "lg";
   variant?: "dark" | "light";
+  src?: string;                    
 };
 
 const sizeMap = {
-  sm: { width: 160, height: 52 },   // 🎯 Age 140×44 → ekhon 150×48
-  md: { width: 220, height: 72 },   // 🎯 Age 180×56 → ekhon 200×64
-  lg: { width: 260, height: 84 },   // 🎯 Age 220×68 → ekhon 240×76
+  sm: { width: 80, height: 28 },
+  md: { width: 100, height: 36 },
+  lg: { width: 130, height: 46 },
 };
 
-export default function Logo({ size = "md", variant = "dark" }: Props) {
+export default function Logo({
+  size = "md",
+  variant = "dark",
+  src = "/logo.png",              
+}: Props) {
   const dims = sizeMap[size];
 
   return (
     <div className="flex items-center shrink-0">
       <Image
-        src="/logo.png"
+        src={src}
         alt="Doorabo — Your Needs, Our Door"
         width={dims.width}
         height={dims.height}
         priority
-        className={`object-contain w-auto h-auto ${
+        unoptimized
+        className={`object-contain ${
           variant === "light" ? "brightness-0 invert" : ""
         }`}
-        style={{ height: dims.height, width: "auto" }}
+        style={{ width: "auto", height: dims.height }}
       />
     </div>
   );
