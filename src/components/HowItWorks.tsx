@@ -78,7 +78,7 @@ export default function HowItWorks() {
               </span>
             </p>
 
-            <p className="text-white/65 mt-5 text-sm">— CEO Doorabo</p>
+            <p className="text-white/65 mt-5 text-sm">— CEO,Doorabo</p>
           </div>
         </div>
       </div>
