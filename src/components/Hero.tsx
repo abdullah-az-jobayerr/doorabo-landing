@@ -15,7 +15,8 @@ export default function Hero() {
       <div className="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full bg-[#08783E]/8 blur-3xl pointer-events-none" />
       <div className="absolute top-40 -left-32 w-[380px] h-[380px] rounded-full bg-[#08783E]/8 blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-5 md:px-8 pt-16 pb-20 md:pt-24 md:pb-28 grid lg:grid-cols-2 gap-12 items-center relative">
+      {/* 🎯 Padding komаno: pt-16→pt-10, pb-20→pb-10, md:pt-24→md:pt-16, md:pb-28→md:pb-14 */}
+      <div className="max-w-7xl mx-auto px-5 md:px-8 pt-10 pb-10 md:pt-16 md:pb-14 grid lg:grid-cols-2 gap-12 items-center relative">
         {/* Left */}
         <div className="reveal">
           {/* Badge with shadow */}
@@ -24,7 +25,7 @@ export default function Hero() {
             শীঘ্রই আসছে রংপুরে
           </span>
 
-          {/* 🎯 Headline — chhoto kora hoyeche */}
+          {/* Headline */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.15] tracking-tight text-[#111827]">
             রংপুরের মানুষের জন্য
             <br />
@@ -65,7 +66,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center gap-5 text-xs md:text-sm text-[#111827]/65">
+          <div className="mt-8 flex flex-wrap items-center gap-5 text-xs md:text-sm text-[#111827]/65">
             {[
               "৩০ মিনিটে হোম ডেলিভারি",
               "১০০% যাচাইকৃত পণ্য",

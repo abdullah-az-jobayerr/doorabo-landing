@@ -47,27 +47,44 @@ export default function Countdown() {
   ];
 
   return (
-    <section className="w-full overflow-hidden py-16 md:py-20">
+    <section className="w-full overflow-hidden py-8 md:py-12">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
-        <div className="relative rounded-xl px-7 py-5 bg-gradient-to-l from-[#2b8d5b] via-[#116438] to-[#032714] text-white border border-[#084e2a] shadow-[0_2px_8px_rgba(8,120,62,0.15)] overflow-hidden">
+        {/* ================= SECTION HEADER (UPORE) ================= */}
+        <div className="text-center max-w-2xl mx-auto mb-12 reveal">
+
+          {/* 🎯 Section Title */}
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#111827]">
+            রংপুরে আসছে{" "}
+            <span className="text-[#08783E]">নতুন শপিং অভিজ্ঞতা!</span>
+          </h2>
+        </div>
+
+        {/* ================= COUNTDOWN CARD (NICHE) ================= */}
+        <div className="relative rounded-xl px-7 py-6 md:px-10 md:py-10 bg-gradient-to-l from-[#2b8d5b] via-[#116438] to-[#032714] text-white border border-[#084e2a] shadow-[0_8px_24px_rgba(8,120,62,0.25),0_4px_8px_rgba(8,120,62,0.15)] overflow-hidden reveal">
           {/* Decorative — softer */}
           <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-[#FFD329]/10 blur-3xl pointer-events-none" />
           <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-[#FFD329]/5 blur-3xl pointer-events-none" />
 
           <div className="relative grid md:grid-cols-2 gap-8 items-center">
+            {/* Left — card title + subtitle */}
             <div>
+              {/* Badge bhitore */}
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#FFD329]/15 text-[#FFD329] text-xs font-semibold mb-4 tracking-wide">
                 <Rocket size={14} weight="fill" />
                 <span>আমাদের যাত্রা শুরু হতে আর</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                রংপুর <span className="text-[#FFD329]">প্রস্তুত তো?</span>
-              </h2>
+
+              {/* Card title */}
+              <h3 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight">
+                রংপুর<span className="text-[#FFD329]">প্রস্তুত তো?</span>
+              </h3>
+
               <p className="mt-3 text-white/70 max-w-md text-sm leading-relaxed">
                 খুব শীঘ্রই আপনার দরজায় পৌঁছে যাবে আপনার দৈনন্দিন প্রয়োজন।
               </p>
             </div>
 
+            {/* Right — countdown boxes */}
             <div className="grid grid-cols-4 gap-2 md:gap-3">
               {items.map((it) => (
                 <div

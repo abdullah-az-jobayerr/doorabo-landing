@@ -37,14 +37,14 @@ export default function HowItWorks() {
               key={s.step}
               className="reveal group relative bg-gradient-to-br from-white to-[#F0F9F4] rounded-xl p-7 border border-[#08783E]/20 hover:border-[#08783E]/40 shadow-[0_2px_8px_rgba(8,120,62,0.06),inset_0_0_0_1px_rgba(255,255,255,0.8)] hover:shadow-[0_8px_20px_rgba(8,120,62,0.12),inset_0_0_0_1px_rgba(255,255,255,0.8)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              {/* Step number badge — layered shadow */}
+              {/* Step number badge */}
               <div className="absolute -top-3.5 -left-3.5 w-9 h-9 rounded-md bg-[#FFD329] text-[#08783E] font-bold text-sm flex items-center justify-center border border-[#08783E]/10 shadow-[0_3px_8px_rgba(8,120,62,0.30),0_1px_2px_rgba(8,120,62,0.20)]">
                 <span className="drop-shadow-[0_1px_1px_rgba(8,120,62,0.40)]">
                   {s.step}
                 </span>
               </div>
 
-              {/* Icon box — with green shadow */}
+              {/* Icon box */}
               <div className="w-14 h-14 rounded-lg bg-[#08783E]/10 flex items-center justify-center mb-5 text-[#08783E] border border-[#08783E]/10 shadow-[0_3px_8px_rgba(8,120,62,0.12),0_1px_2px_rgba(8,120,62,0.08)] group-hover:bg-[#08783E]/15 group-hover:shadow-[0_4px_12px_rgba(8,120,62,0.18)] transition-all duration-300">
                 <span className="drop-shadow-[0_1px_1px_rgba(8,120,62,0.30)]">
                   {iconMap[s.iconKey] ?? iconMap.cart}
@@ -61,21 +61,24 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        {/* Quote card — with layered shadow */}
+        {/* Quote card — opening + closing quote marks */}
         <div className="mt-14 reveal">
-          <div className="relative rounded-xl px-5 py-7 bg-gradient-to-l from-[#2b8d5b] via-[#116438] to-[#032714] text-white border border-[#084e2a] shadow-[0_8px_24px_rgba(8,120,62,0.25),0_4px_8px_rgba(8,120,62,0.15)] overflow-hidden">
-            <div className="absolute -top-16 -right-10 w-64 h-64 rounded-full bg-[#FFD329]/10 blur-3xl" />
-            <div className="relative flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
-              <div className="text-6xl md:text-7xl text-[#FFD329] font-serif leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.30)]">
+          <div className="relative rounded-xl px-6 py-10 md:px-10 md:py-14 bg-gradient-to-l from-[#2b8d5b] via-[#116438] to-[#032714] text-white border border-[#084e2a] shadow-[0_8px_24px_rgba(8,120,62,0.25),0_4px_8px_rgba(8,120,62,0.15)] overflow-hidden">
+            {/* Decorative glow */}
+            <div className="absolute -top-16 -right-10 w-64 h-64 rounded-full bg-[#FFD329]/10 blur-3xl pointer-events-none" />
+
+            {/* 🎯 Quote text with opening + closing marks */}
+            <p className="relative text-lg md:text-xl lg:text-2xl font-bold leading-relaxed md:leading-relaxed lg:leading-relaxed tracking-tight">
+              <span className="text-[#FFD329] text-3xl md:text-4xl lg:text-5xl font-serif leading-none mr-1 md:mr-2 align-top drop-shadow-[0_2px_4px_rgba(0,0,0,0.30)] select-none">
                 &ldquo;
-              </div>
-              <div>
-                <p className="text-2xl md:text-3xl font-bold leading-snug tracking-tight">
-                  আপনার সময় বাঁচানো আমাদের দায়িত্ব
-                </p>
-                <p className="text-white/65 mt-3 text-sm">— Doorabo</p>
-              </div>
-            </div>
+              </span>
+              দীর্ঘদিন এই সেক্টরে কাজ করার অভিজ্ঞতা থেকে বলতে পারি, রংপুরবাসী ভালো কিছুই পেতে যাচ্ছে ইনশাআল্লাহ
+              <span className="text-[#FFD329] text-3xl md:text-4xl lg:text-5xl font-serif leading-none ml-1 md:ml-2 align-top drop-shadow-[0_2px_4px_rgba(0,0,0,0.30)] select-none">
+                &rdquo;
+              </span>
+            </p>
+
+            <p className="text-white/65 mt-5 text-sm">— CEO Doorabo</p>
           </div>
         </div>
       </div>
