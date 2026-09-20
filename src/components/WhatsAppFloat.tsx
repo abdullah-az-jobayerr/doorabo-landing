@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function WhatsAppFloat({
-  phoneNumber = "8801700000000", // 🔧 tomar number ekhane
+  phoneNumber = "8801577744073",
   message = "আসসালামু আলাইকুম, Doorabo সম্পর্কে জানতে চাই।",
 }: Props) {
   const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

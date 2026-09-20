@@ -10,7 +10,7 @@ import {
 import Logo from "./Logo";
 
 const socials = [
-  { name: "Facebook", href: "#", Icon: FacebookLogo },
+  { name: "Facebook", href: "https://www.facebook.com/doorabobd", Icon: FacebookLogo },
   { name: "Instagram", href: "#", Icon: InstagramLogo },
   { name: "YouTube", href: "#", Icon: YoutubeLogo },
   { name: "TikTok", href: "#", Icon: TiktokLogo },
@@ -60,10 +60,10 @@ export default function Footer() {
                   <Phone size={16} weight="fill" />
                 </span>
                 <a
-                  href="tel:+8801XXXXXXXXX"
+                  href="tel:+8801577-744073"
                   className="hover:text-[#FFD329] transition-colors"
                 >
-                  +880 1XXX-XXXXXX
+                  +8801577-744073
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
@@ -71,10 +71,10 @@ export default function Footer() {
                   <EnvelopeSimple size={16} weight="fill" />
                 </span>
                 <a
-                  href="mailto:hello@doorabo.com"
+                  href="mailto:dooraboofficial@gmail.com"
                   className="hover:text-[#FFD329] transition-colors"
                 >
-                  hello@doorabo.com
+                   dooraboofficial@gmail.com
                 </a>
               </li>
             </ul>
