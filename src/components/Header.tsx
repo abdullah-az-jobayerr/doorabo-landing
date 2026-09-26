@@ -22,7 +22,6 @@ export default function Header() {
       {/* ================= MARQUEE (top) ================= */}
       <div className="w-full bg-gradient-to-l from-[#2b8d5b] via-[#116438] to-[#032714] text-white overflow-hidden border-b border-[#084e2a]">
         <div className="relative flex overflow-hidden py-2">
-          {/* Marquee track — duplicated for seamless loop */}
           <div className="flex shrink-0 animate-marquee whitespace-nowrap">
             <span className="mx-8 text-[11px] md:text-xs font-medium tracking-wide">
               {MARQUEE_TEXT}
@@ -52,7 +51,8 @@ export default function Header() {
       </div>
 
       {/* ================= MAIN HEADER (below marquee) ================= */}
-      <div className="bg-[#FCFDF9]/95 backdrop-blur-md border-b border-[#08783E]/10 shadow-[0_1px_3px_rgba(8,120,62,0.04)]">
+      {/* 🎯 bg-[#F7F7F7] — logo image er bg color er sathe match */}
+      <div className="bg-[#F7F7F7]/95 backdrop-blur-md border-b border-[#08783E]/10 shadow-[0_1px_3px_rgba(8,120,62,0.04)]">
         <div className="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between">
           <Logo />
 
@@ -115,7 +115,7 @@ export default function Header() {
 
         {/* Mobile dropdown — animated */}
         <div
-          className={`lg:hidden overflow-hidden bg-[#FCFDF9] border-t transition-all duration-300 ease-in-out ${
+          className={`lg:hidden overflow-hidden bg-[#F7F7F7] border-t transition-all duration-300 ease-in-out ${
             open
               ? "max-h-96 opacity-100 border-[#08783E]/10"
               : "max-h-0 opacity-0 border-transparent"
