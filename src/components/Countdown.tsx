@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Rocket } from "@phosphor-icons/react";
 
 // 🔧 Change this to your real launch date
-const LAUNCH_DATE = new Date("2026-10-16T00:00:00+06:00").getTime();
+const LAUNCH_DATE = new Date("2026-10-22T00:00:00+06:00").getTime();
 
 type TimeLeft = {
   days: number;
@@ -71,12 +71,12 @@ export default function Countdown() {
               {/* Badge bhitore */}
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#FFD329]/15 text-[#FFD329] text-xs font-semibold mb-4 tracking-wide">
                 <Rocket size={14} weight="fill" />
-                <span>আমাদের যাত্রা শুরু হতে আর</span>
+                <span>আমাদের যাত্রা শুরু হতে আর বাকি...</span>
               </div>
 
               {/* Card title */}
               <h3 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight">
-                রংপুর <span className="text-[#FFD329]">প্রস্তুত তো?</span>
+                রংপুরবাসী <span className="text-[#FFD329]">প্রস্তুত তো?</span>
               </h3>
 
               <p className="mt-3 text-white/70 max-w-md text-sm leading-relaxed">
