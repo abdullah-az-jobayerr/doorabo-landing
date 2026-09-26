@@ -42,7 +42,7 @@ export default function DeliveryArea() {
           <div className="relative rounded-xl overflow-hidden aspect-[4/3] shadow-[0_8px_24px_rgba(8,120,62,0.20),0_2px_6px_rgba(8,120,62,0.15)] border border-[#08783E]/10">
             {/* 🎯 Rangpur image */}
             <Image
-              src="/rangpur.jpg"
+              src="/rangpur.jpeg"
               alt="রংপুর শহর"
               fill
               priority
