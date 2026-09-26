@@ -19,13 +19,11 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-5 md:px-8 pt-10 pb-10 md:pt-16 md:pb-14 grid lg:grid-cols-2 gap-12 items-center relative">
         {/* Left */}
         <div className="reveal">
-          {/* Badge with shadow */}
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#08783E]/8 text-[#08783E] text-xs font-semibold mb-6 tracking-wide border border-[#08783E]/10 shadow-[0_2px_4px_rgba(8,120,62,0.10)]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#08783E] animate-pulseSlow shadow-[0_0_6px_rgba(8,120,62,0.50)]" />
             শীঘ্রই আসছে রংপুরে
           </span>
 
-          {/* Headline */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.15] tracking-tight text-[#111827]">
             রংপুরের মানুষের জন্য
             <br />
@@ -87,26 +85,26 @@ export default function Hero() {
 
         {/* Right — Hero image */}
         <div className="relative reveal">
-          <div className="relative rounded-xl aspect-square max-w-[400px] sm:max-w-[480px] md:max-w-[520px] mx-auto shadow-[0_8px_24px_rgba(8,120,62,0.25),0_4px_8px_rgba(8,120,62,0.15)] overflow-hidden border border-[#084e2a]">
-            {/* 🎯 Hero image */}
+          {/* 🎯 Chhoto image container: max-w-[320px] sm:max-w-[380px] md:max-w-[420px] */}
+          <div className="relative rounded-xl aspect-square max-w-[320px] sm:max-w-[380px] md:max-w-[420px] mx-auto shadow-[0_8px_24px_rgba(8,120,62,0.25),0_4px_8px_rgba(8,120,62,0.15)] overflow-hidden border border-[#084e2a]">
             <Image
               src="/hero.jpeg"
               alt="Doorabo — রংপুরের মানুষের জন্য"
               fill
               priority
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 40vw"
             />
 
             {/* Yellow accent — shopping cart */}
-            <div className="absolute top-4 right-4 md:top-6 md:right-6 w-12 h-12 md:w-16 md:h-16 rounded-lg bg-[#FFD329] flex items-center justify-center rotate-3 shadow-[0_4px_12px_rgba(8,120,62,0.40),0_2px_4px_rgba(8,120,62,0.25)]">
+            <div className="absolute top-3 right-3 md:top-4 md:right-4 w-10 h-10 md:w-12 md:h-12 rounded-lg bg-[#FFD329] flex items-center justify-center rotate-3 shadow-[0_4px_12px_rgba(8,120,62,0.40),0_2px_4px_rgba(8,120,62,0.25)]">
               <ShoppingCart
-                size={24}
+                size={20}
                 weight="duotone"
                 className="text-[#08783E] md:hidden drop-shadow-[0_1px_1px_rgba(8,120,62,0.50)]"
               />
               <ShoppingCart
-                size={28}
+                size={24}
                 weight="duotone"
                 className="text-[#08783E] hidden md:block drop-shadow-[0_1px_1px_rgba(8,120,62,0.50)]"
               />
